@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+    <!--
+  * Please see the included README.md file for license terms and conditions.
+  -->
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="jqm/jquery.mobile-min.css">
+        <title>Blank App Designer Project Template</title>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+        <!--
+  * The "meta viewport" tag (below) helps your app size appropriately to a device's screen.
+  * Note that the meta viewport approach is being phased out in favor of the @viewport CSS rule.
+  * For a quick overview of both, see this article:
+  *   http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag
+  * To see what happens, try the app on a real device with and without a "meta viewport" tag.
+-->
+
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+
+        <style>
+            /* following three (cascaded) are equivalent to above three meta viewport statements */
+            /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html */
+            /* see http://dev.w3.org/csswg/css-device-adapt/ */
+                @-ms-viewport { width: 100vw ; zoom: 100% ; }                           @viewport { width: 100vw ; zoom: 100% ; }
+                @-ms-viewport { user-zoom: fixed ; }                                    @viewport { user-zoom: fixed ; }
+                /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+        </style>
+
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" type="text/css" href="css/index_main.less.css" class="main-less">
+
+        <!-- IMPORTANT: Do not include your weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work below -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+
+        <!-- Most third-party libraries should go here. References (below) are just examples to give you the general idea... -->
+        <!-- <script src="lib/mc/hammer.js"></script> -->
+        <!-- <script src="lib/ft/fastclick.js"></script> -->
+
+        <script src="intelxdk.js"></script>
+        <!-- phantom library, needed for Intel XDK "legacy" container api calls -->
+        <script src="cordova.js"></script>
+        <!-- phantom library, needed for Cordova api calls -->
+        <script src="xhr.js"></script>
+        <!-- phantom library, needed for Intel XDK "legacy" container CORS -->
+
+        <script src="js/app.js"></script>
+        <!-- for your event code, see README and file comments for details -->
+        <script src="js/init-app.js"></script>
+        <!-- for your init code, see README and file comments for details -->
+        <script src="xdk/init-dev.js"></script>
+        <!-- normalizes device and document ready events, see file for details -->
+        <script type="application/javascript" src="lib/jquery.min.js"></script>
+        <script type="application/javascript" src="jqm/jquery.mobile-min.js" data-ver="0"></script>
+        <script type="application/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=true"></script>
+        <script type="application/javascript" src="google_maps/google_maps.js"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="sidebar/js/hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/jquery.hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/swipe-hammer.js"></script>
+        <script type="application/javascript" src="sidebar/js/sidebar.js"></script>
+    </head>
+
+    <body>
+        <!-- IMPORTANT: Do not include your weinre script tag as part of your release builds! -->
+        <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
+        <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <div class="upage backStyle" id="mainpage" data-role="page">
+            <div class="upage-outer">
+                <div data-role="header" class="container-group inner-element uib_w_2" data-uib="jquery_mobile/header" data-ver="0">
+                    <h1>Sosh Xplorer</h1>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+                <div class="upage-content content-area vertical-col" id="page_34_26">
+                    <div class="widget uib_w_3 ui-content no_wrap outset-margin d-margins" data-uib="jquery_mobile/listview" data-ver="0">
+                        <ul data-role="listview">
+                            <li class="widget uib_w_4" data-uib="jquery_mobile/listitem" data-ver="0"><a href="page #academic"><span>Academic Institutions</span></a>
+                            </li>
+                            <li class="widget uib_w_5" data-uib="jquery_mobile/listitem" data-ver="0"><a href="page #community"><span>Community Feeds</span></a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div data-role="footer" data-position="fixed" class="container-group inner-element uib_w_1" data-uib="jquery_mobile/footer" data-ver="0">
+                    <h1></h1>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+            </div>
+        </div>
+        <div class="upage textAcad backStyle" id="academic" data-role="page">
+            <div class="upage-outer">
+                <div data-role="header" class="container-group inner-element uib_w_6" data-uib="jquery_mobile/header" data-ver="0">
+                    <h1>Sosh Xplorer</h1>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+                <div class="upage-content content-area vertical-col" id="page_95_62">
+                    <div class="widget uib_w_8 d-margins" data-uib="media/text" data-ver="0">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div>
+                            <p>The following lists the most two popular Academic Institutions around Sosha</p>
+                        </div>
+                    </div><a class="widget uib_w_9 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" href="#tncpage" data-transition="fade">Tshwane North College</a>
+                    <a class="widget uib_w_10 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button" id="btnTuT" href="#tutpage" data-transition="fade">Tshwane University of Technology</a>
+                </div>
+                <div data-role="footer" data-position="fixed" class="container-group inner-element uib_w_7" data-uib="jquery_mobile/footer" data-ver="0">
+                    <h1>ThinkFast</h1>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+            </div>
+        </div>
+        <div class="upage" id="tutpage" data-role="page">
+            <div class="upage-outer">
+                <div data-role="header" class="container-group inner-element uib_w_11" data-uib="jquery_mobile/header" data-ver="0">
+                    <h1>Sosh Xplorer</h1>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+                <div class="upage-content content-area vertical-col" id="page_58_94">
+                    <div class="widget uib_w_13 d-margins textStyle" data-uib="media/text" data-ver="0">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div>
+                            <p>Tshwane University of Technology</p>
+                        </div>
+                    </div><a class="widget uib_w_14 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">Campus News</a><a class="widget uib_w_15 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">Events</a><a class="widget uib_w_16 d-margins"
+                    data-uib="jquery_mobile/button" data-ver="0" data-role="button">Resources</a>
+                    <div class="widget uib_w_17 d-margins textStyle" data-uib="media/text" data-ver="0">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div>
+                            <p>Location</p>
+                        </div>
+                    </div>
+                    <div class="widget uib_w_18 google-maps-size d-margins" data-uib="media/google_maps" data-ver="0" data-rpath="null" data-zoom="8"></div>
+                </div>
+                <div data-role="footer" data-position="fixed" class="container-group inner-element uib_w_12" data-uib="jquery_mobile/footer" data-ver="0">
+                    <h1>ThinkFast</h1>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+            </div>
+        </div>
+        <div class="upage backStyle" id="tncpage" data-role="page">
+            <div class="upage-outer">
+                <div data-role="header" class="container-group inner-element uib_w_19" data-uib="jquery_mobile/header" data-ver="0">
+                    <h1>Sosh Xplo</h1>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+                <div class="upage-content content-area vertical-col" id="page_93_93">
+                    <div class="widget uib_w_21 d-margins textStyle headerStyle" data-uib="media/text" data-ver="0">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div>
+                            <p>Tshwane North College</p>
+                        </div>
+                    </div>
+                    <a class="widget uib_w_22 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">Campus News</a><a class="widget uib_w_23 d-margins" data-uib="jquery_mobile/button" data-ver="0" data-role="button">Events</a><a class="widget uib_w_24 d-margins"
+                    data-uib="jquery_mobile/button" data-ver="0" data-role="button">Resources</a>
+                    <div class="widget uib_w_25 d-margins textStyle" data-uib="media/text" data-ver="0">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div>
+                            <p>Location</p>
+                        </div>
+                    </div>
+                    <div class="widget uib_w_26 google-maps-size d-margins" data-uib="media/google_maps" data-ver="0" data-rpath="null" data-zoom="8"></div>
+                </div>
+                <div data-role="footer" data-position="fixed" class="container-group inner-element uib_w_20" data-uib="jquery_mobile/footer" data-ver="0">
+                    <h1></h1>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+            </div>
+        </div>
+        <div class="upage backStyle" id="community" data-role="page">
+            <div class="upage-outer">
+                <div data-role="header" class="container-group inner-element uib_w_28" data-uib="jquery_mobile/header" data-ver="0">
+                    <h1>Sosh Xplorer</h1>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+                <div class="upage-content content-area vertical-col" id="page_19_34">
+                    <div class="widget uib_w_34 d-margins headerStyle" data-uib="media/text" data-ver="0">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div>
+                            <p>Community Feeds</p>
+                        </div>
+                    </div>
+                    <div class="widget uib_w_35 d-margins textAcad textStyle textRight" data-uib="media/text" data-ver="0">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div>
+                            <p>Recent updates</p>
+                        </div>
+                    </div>
+                    <div class="widget uib_w_36 d-margins" data-uib="media/text" data-ver="0">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div>
+                            <p>President Zuma and his wives to visit Gaint Stadium on the 8th of March.</p>
+                            <p>&nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="widget uib_w_37 d-margins" data-uib="media/text" data-ver="0">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div>
+                            <p>Best Maths award has been granted to a matriculated granny (aged 75) in Block H</p>
+                        </div>
+                    </div>
+                    <div class="widget uib_w_38 d-margins textRight" data-uib="media/text" data-ver="0">
+                        <div class="widget-container left-receptacle"></div>
+                        <div class="widget-container right-receptacle"></div>
+                        <div>
+                            <p>Missing</p>
+                        </div>
+                    </div>
+                    <div class="widget uib_w_39 scale-image d-margins" data-uib="media/img" data-ver="0">
+                        <figure class="figure-align">
+                            <img src="images/missing.jpg">
+                            <figcaption data-position="bottom"></figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div data-role="footer" data-position="fixed" class="container-group inner-element uib_w_27" data-uib="jquery_mobile/footer" data-ver="0">
+                    <h1>ThinkFast</h1>
+                    <div class="widget-container wrapping-col single-centered"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col left"></div>
+                    <div class="widget-container content-area horiz-area wrapping-col right"></div>
+                </div>
+            </div>
+            <div class="outer-element uib_w_29 uib_crossbar botbar fixed bar-bg thumb-bg bar-gutter swipe" data-uib="layout/bottom_crossbar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'bottom', 'dur':200}">
+                <div class="sidebar-content content-area vertical-col">
+
+                    <div class="widget uib_w_30 ui-content no_wrap outset-margin d-margins" data-uib="jquery_mobile/listview" data-ver="0">
+                        <ul data-role="listview">
+                            <li class="widget uib_w_31" data-uib="jquery_mobile/listitem" data-ver="0"><span>Meetings</span>
+                            </li>
+                            <li class="widget uib_w_32" data-uib="jquery_mobile/listitem" data-ver="0"><span>Events</span>
+                            </li>
+                            <li class="widget uib_w_33" data-uib="jquery_mobile/listitem" data-ver="0"><span>Loadshedding schedule</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="outer-element uib_w_40 uib_crossbar botbar fixed bar-bg thumb-bg bar-gutter swipe" data-uib="layout/bottom_crossbar" data-ver="1" data-anim="{'style':'overlap', 'v':200, 'side':'bottom', 'dur':200, 'io':true}">
+                <div class="sidebar-content content-area vertical-col">
+
+                    <div class="widget uib_w_41 ui-content no_wrap outset-margin d-margins" data-uib="jquery_mobile/listview" data-ver="0">
+                        <ul data-role="listview">
+                            <li class="widget uib_w_42" data-uib="jquery_mobile/listitem" data-ver="0"><span>Meetings</span>
+                            </li>
+                            <li class="widget uib_w_43" data-uib="jquery_mobile/listitem" data-ver="0"><span>Events</span>
+                            </li>
+                            <li class="widget uib_w_44" data-uib="jquery_mobile/listitem" data-ver="0"><span>Socio Dev Projects</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
